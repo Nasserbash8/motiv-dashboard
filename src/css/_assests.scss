@@ -1,0 +1,330 @@
+.assests {
+    p {
+        color: $textcolor;
+    }
+
+    h6,
+    h3 {
+        color: $secondtextcolor;
+    }
+
+    .assest-content {
+
+        .car-detalies {
+            &.dark_mode {
+                background: $dark_maincolor;
+                background: linear-gradient(180deg, $dark_maincolor 50%, $dark_bodycolor 70%);
+
+            }
+
+            &.light_mode {
+                background: $darkcolor;
+                background: linear-gradient(180deg, $darkcolor 50%, $bodycolor 70%);
+            }
+
+            span {
+
+
+
+                &.dark_mode {
+                    P {
+                        color: $dark_textcolor;
+                    }
+
+                    h6 {
+                        color: $dark_secondtextcolor;
+                    }
+                }
+
+                &.light_mode {
+                    P {
+                        color: $maincolor;
+                    }
+
+                    h6 {
+                        color: $maincolor;
+                    }
+                }
+            }
+
+        }
+
+        .detaleis {
+            overflow: hidden;
+
+            .Noties {
+                p {
+                    font-size: 11px;
+
+                }
+
+                i {
+                    color: $secondtextcolor;
+                    font-size: 10px;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50px;
+                    text-align: center;
+                    background-color: $bodycolor;
+                    padding: 1px;
+                }
+
+                .Completed {
+                    background-color: rgb(55, 134, 55);
+                    color: $secondtextcolor;
+                }
+
+                .not-Completed {
+                    background-color: $textcolor;
+                    color: $secondtextcolor;
+                }
+
+                &.dark_mode {
+                    background: $dark_maincolor;
+
+                    h6 {
+                        font-size: 13px;
+                        color: $dark_secondtextcolor;
+                    }
+
+                    h3 {
+
+                        color: $dark_secondtextcolor;
+                    }
+                }
+
+                &.light_mode {
+                    background-color: $maincolor;
+
+                    h6 {
+                        font-size: 13px;
+                        color: $secondtextcolor;
+                    }
+
+                    h3 {
+
+                        color: $secondtextcolor;
+                    }
+                }
+
+            }
+
+            .Available-Sensors {
+                &.dark_mode {
+                    background: $dark_maincolor;
+
+                    h3,
+                    label {
+
+                        color: $dark_secondtextcolor;
+                    }
+                }
+
+                &.light_mode {
+                    background-color: $maincolor;
+
+                    h3,
+                    label {
+
+                        color: $secondtextcolor;
+                    }
+
+                }
+
+                form {
+
+                    input:checked {
+                        background-color: #FF6370;
+                        border: none;
+
+                    }
+
+                }
+            }
+
+            .Reminder {
+                &.dark_mode {
+                    background: $dark_maincolor;
+
+                    h3,
+                    label {
+
+                        color: $dark_secondtextcolor;
+                    }
+
+                }
+
+                &.light_mode {
+                    background-color: $maincolor;
+
+                    h3,
+                    label {
+
+                        color: $secondtextcolor;
+                    }
+
+                }
+
+
+                button {
+                    background-color: $primarycolor;
+                    border: none;
+                }
+
+                table {
+
+                    overflow: scroll;
+
+                    border: none;
+
+                    thead {
+                        color: $textcolor ;
+                        border-bottom: 2px solid #c1c1c112;
+                    }
+
+                    tbody {
+                        tr {
+
+                            background-color: transparent;
+                            border-bottom: 2px solid #c1c1c112;
+
+                            &:last-child {
+                                border: none;
+                            }
+                        }
+
+                        td,
+                        th {
+                            border: none;
+                        }
+                    }
+
+                    &.dark_mode {
+                        background: $dark_maincolor;
+
+                        tbody {
+                            tr {
+                                background-color: $dark_maincolor;
+                                color: $dark_secondtextcolor;
+                            }
+                        }
+
+
+                    }
+
+                    &.light_mode {
+                        background-color: $maincolor;
+
+                        tbody {
+                            tr {
+                                background-color: $maincolor;
+                            }
+                        }
+                    }
+
+
+                }
+
+            }
+        }
+    }
+
+    .add-reminder {
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.3s ease-in;
+        background-color: rgba(39, 38, 38, 0.699);
+        position: fixed;
+        top: 0;
+        z-index: 20;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+
+        .close-form {
+            position: absolute;
+            top: 15px;
+            right: 50px;
+            font-size: 2em;
+            transition: all 0.3s ease-in;
+            cursor: pointer;
+
+
+        }
+
+        form {
+            position: absolute;
+
+            top: 20%;
+            left: 0;
+            right: 0;
+            margin-left: 15%;
+            margin-right: 15%;
+
+            .form-control:focus {
+                border-color: $primarycolor;
+                box-shadow: 0 0 0 0.2rem #a062f759;
+            }
+
+            input {
+                background-color: transparent;
+                color: $textcolor;
+                border: none;
+
+            }
+
+            .form-check {
+                input {
+                    background-color: $primarycolor;
+                    color: black !important;
+                }
+            }
+
+            button {
+                background-color: $primarycolor;
+                border: none;
+            }
+        }
+
+
+
+        &.dark_mode {
+            form {
+                background-color: $dark_maincolor;
+            }
+
+            .close-form {
+                color: $dark_secondtextcolor;
+
+                &:hover {
+                    color: $primarycolor;
+                }
+            }
+        }
+
+        &.light_mode {
+            form {
+                background-color: $maincolor;
+            }
+
+            .close-form {
+                color: $secondtextcolor;
+
+                &:hover {
+                    color: $primarycolor;
+                }
+            }
+        }
+    }
+
+}
+
+.checked {
+    color: #FF6370;
+}
+
+.active-form {
+    visibility: visible !important;
+    opacity: 1 !important;
+}

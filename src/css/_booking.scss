@@ -1,0 +1,58 @@
+.filtring {
+    form {
+        select {
+
+            border: none;
+            width: 120px;
+
+        }
+    }
+
+    .display-style {
+        i {
+            font-size: small;
+            background-color: $maincolor;
+            transition: all 0.3s ease-in;
+            color: $textcolor;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $primarycolor;
+                color: $maincolor;
+            }
+        }
+    }
+
+    .active {
+        background-color: $primarycolor !important;
+        color: $maincolor !important;
+    }
+
+    &.dark_mode {
+        form {
+            select {
+                background-color: $dark_maincolor;
+                color: $dark_secondtextcolor;
+            }
+        }
+
+        .gird-style {
+            background-color: $dark_maincolor;
+            color: $dark_secondtextcolor;
+        }
+    }
+
+    &.light_mode {
+        form {
+            select {
+                background-color: $maincolor;
+                color: $secondtextcolor;
+            }
+        }
+
+        .gird-style {
+            background-color: $maincolor;
+            color: $secondtextcolor;
+        }
+    }
+}

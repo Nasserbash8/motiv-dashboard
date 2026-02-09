@@ -1,0 +1,63 @@
+.sell {
+    .offers {
+        border-radius: 7px;
+
+        .offer {
+            .recharts-responsive-container {
+                height: 100px !important;
+            }
+
+            p {
+                font-size: 12px;
+                margin-bottom: 0;
+            }
+
+        }
+    }
+
+    &.dark_mode {
+        .card {
+
+            h3 {
+                color: $dark_secondtextcolor;
+            }
+        }
+
+        .offers {
+            background-color: $dark_maincolor;
+
+            .offer {
+                h6 {
+                    color: $dark_secondtextcolor;
+                }
+
+                p {
+                    color: $dark_secondtextcolor;
+                }
+            }
+        }
+    }
+
+    &.light_mode {
+        .card {
+            h3 {
+                color: $secondtextcolor;
+            }
+        }
+
+        .offers {
+            background-color: $maincolor;
+
+            .offer {
+                h6 {
+                    color: $secondtextcolor;
+                }
+
+                p {
+                    color: $secondtextcolor;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,85 @@
+@import "./dark_mode";
+@import "./light_mode";
+@import "./header";
+@import "./sidebar";
+@import "./card";
+@import "./booking";
+@import "./dashboard";
+@import "./assests";
+@import "./sell";
+@import "./calender";
+@import "./services";
+@import "./sign-in";
+
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    &.dark_mode {
+        background-color: $dark_bodycolor ;
+    }
+
+    &.light_mode {
+        background-color: $bodycolor ;
+    }
+}
+
+.main-container {
+    position: relative;
+    right: 0;
+}
+
+.content-container {
+    width: calc(100% - 250px);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.title {
+
+    &.dark_mode {
+        color: $dark_secondtextcolor;
+    }
+
+    &.light_mode {
+        color: $secondtextcolor ;
+    }
+
+}
+
+.chart {
+
+    .recharts-wrapper {
+        &.dark_mode {
+            background-color: $dark_maincolor !important;
+        }
+
+        &.light_mode {
+            background-color: $maincolor;
+
+        }
+
+        width: 100% !important;
+    }
+
+    .recharts-surface {
+        width: 100% !important;
+    }
+
+    .recharts-tooltip-wrapper {
+        color: $maincolor;
+
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .content-container {
+        width: 100%;
+    }
+}

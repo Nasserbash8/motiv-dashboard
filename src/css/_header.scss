@@ -1,0 +1,72 @@
+.header {
+    &.dark_mode {
+        background-color: $dark_maincolor;
+    }
+
+    &.light_mode {
+        background-color: $maincolor ;
+    }
+
+    .open-sidebar {
+        background-color: rgba(0, 255, 255, 0);
+
+        &.dark_mode {
+            color: $dark_secondtextcolor ;
+
+        }
+
+        &.light_mode {
+            color: $textcolor;
+        }
+
+        border: none;
+
+    }
+
+    input {
+        &.dark_mode {
+            background-color: $dark_bodycolor;
+        }
+
+        &.light_mode {
+            background-color: $bodycolor;
+        }
+
+        height: 25px;
+        border: none;
+        color: $secondtextcolor;
+
+        &:focus {
+            background-color: $bodycolor;
+            border: none;
+            color: $secondtextcolor;
+        }
+    }
+
+    .notification {
+        position: relative;
+        font-size: 1.3em;
+
+        &.dark_mode {
+            color: $dark_secondtextcolor ;
+        }
+
+        &.light_mode {
+            color: $textcolor;
+        }
+
+        cursor: pointer;
+
+        &::after {
+            content: '';
+            width: 7px;
+            height: 7px;
+            position: absolute;
+            background-color: red;
+
+            border-radius: 50px;
+            top: 7px;
+            left: 7px;
+        }
+    }
+}

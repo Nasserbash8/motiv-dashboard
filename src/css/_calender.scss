@@ -1,0 +1,162 @@
+.calender {
+    .css-1q04gal-MuiDateCalendar-root {
+        width: 100%;
+    }
+
+    .card {
+        border-radius: 15px;
+
+        .events-control {
+            border-radius: 15px 15px 0 0;
+        }
+
+        .MuiPickersLayout-root {
+            background-color: transparent;
+        }
+
+
+    }
+
+    .events,
+    .calender-times {
+
+        .events-control {
+            background-color: #549CFD !important;
+
+            .MuiOutlinedInput-input {
+                color: white;
+            }
+
+            .date-control {
+                background-color: #bdbdbd5e;
+                border-radius: 5px;
+                transition: all .3s ease-in;
+
+                &:hover {
+                    background: #918f8f5e;
+                }
+
+                button {
+                    background-color: transparent;
+                    padding: 5px;
+                    border: none;
+
+                    width: 40px;
+                    height: 32px;
+                }
+            }
+        }
+
+        .no-event {
+            position: relative;
+
+            &::after {
+                content: '';
+                width: 80%;
+                position: absolute;
+                right: 0;
+                top: 13px;
+                background-color: rgba(111, 109, 109, 0.244);
+                height: 1px;
+
+            }
+        }
+
+        .event {
+            border-radius: 9px;
+
+            img {
+                width: 25px;
+                height: 25px;
+
+            }
+        }
+    }
+
+    .calender-times {
+        min-height: 735px;
+    }
+
+    &.dark_mode {
+
+        .card {
+
+            .MuiButtonBase-root,
+           .MuiDayCalendar-header span,
+            button {
+
+                color: $dark_secondtextcolor;
+            }
+
+            h3,
+            p,
+            h4,
+            h6,
+            h5 {
+                color: $dark_secondtextcolor;
+            }
+        }
+
+    }
+
+    &.light_mode {
+        .css-1q04gal-MuiDateCalendar-root {
+            background-color: $maincolor !important;
+        }
+
+        .MuiButtonBase-root,
+        .MuiDayCalendar-header span{
+            color: $secondtextcolor;
+        }
+
+        .date-control {
+            button {
+                color: $dark_secondtextcolor;
+            }
+        }
+
+        .card {
+
+            h3,
+            p,
+            h4,
+            h6,
+            h5 {
+                color: $secondtextcolor;
+            }
+        }
+
+    }
+}
+
+.css-dplwbx-MuiPickersCalendarHeader-label {
+    color: $lightcolor !important;
+}
+
+.Mui-selected {
+    background-color: $lightcolor !important;
+}
+
+.MuiTypography-overline,
+.MuiDialogActions-root {
+    display: none !important;
+}
+
+.date-input {
+    width: 150px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: none;
+    background: #bdbdbd5e;
+    transition: all .3s ease-in;
+
+    &:hover {
+        background: #918f8f5e;
+    }
+
+    padding: 5px;
+
+    .MuiOutlinedInput-notchedOutline {
+        border: none;
+    }
+}

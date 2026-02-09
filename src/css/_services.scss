@@ -1,0 +1,197 @@
+.services {
+
+    .card {
+        border: none;
+    }
+
+    .station {
+        .item {
+            width: 50px;
+            height: 60px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+    }
+
+    .orders {
+        .order-border {
+            svg {
+                position: relative;
+                height: 150px;
+                width: 150px;
+            }
+
+            circle {
+                stroke-width: 4px;
+                fill: transparent;
+            }
+
+            #purple {
+                stroke: #A162F7;
+            }
+
+            #rose {
+                stroke: #FF6370;
+                stroke-dasharray: 100, 200;
+
+            }
+
+            #green {
+                stroke: #70CF97;
+
+
+                stroke-dasharray: 100, 200;
+                stroke-dashoffset: -88.75;
+            }
+
+            .order {
+                position: absolute;
+                top: 58%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 50px;
+                width: 90px;
+                height: 90px;
+
+                p {
+                    font-size: 10px;
+
+                }
+
+            }
+        }
+
+        .order-item {
+
+
+            .price {
+                color: $primarycolor ;
+                background-color: #a162f730;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    .pay {
+        background-color: #A162F7;
+        color: white;
+        padding: 15px;
+        border-radius: 8px;
+        border: none;
+        transition: all 0.3s ease-in;
+        font-size: 20px;
+
+        &:hover {
+            background-color: #a062f7d1;
+        }
+    }
+
+    .timeline {
+        .MuiTimelineItem-root {
+            &::before {
+                display: none !important;
+            }
+        }
+    }
+
+    .levels {
+        border-radius: 5px;
+
+        img {
+            width: 73px;
+            height: 44px;
+
+        }
+
+        .line {
+            position: relative;
+            width: 180px;
+            height: 5px;
+            border-radius: 8px;
+            overflow: hidden;
+
+        }
+
+        .mask-line {
+            position: absolute;
+            left: 0;
+            width: 50%;
+            height: 5px;
+            border-radius: 8px;
+        }
+    }
+
+    .circle {
+        width: 10px;
+        height: 10px;
+        border-radius: 50px;
+        position: absolute;
+        left: -15px;
+        top: 10px;
+    }
+
+    &.dark_mode {
+        .order {
+            background-color: #2B2E38;
+        }
+
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: $dark_secondtextcolor;
+        }
+
+        .card,
+        .levels {
+            background-color: $dark_maincolor;
+        }
+
+        .station {
+            .item {
+                background-color: $dark_maincolor;
+                color: $dark_secondtextcolor;
+            }
+        }
+
+        .line {
+            background-color: #2B2E38;
+        }
+    }
+
+    &.light_mode {
+        .order {
+            background-color: #F6F6F6;
+        }
+
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: $secondtextcolor;
+        }
+
+        .card,
+        .levels {
+            background-color: $maincolor;
+        }
+
+        .station {
+            .item {
+                background-color: $maincolor;
+                color: $secondtextcolor;
+            }
+        }
+
+        .line {
+            background-color: #F5F5F5;
+        }
+    }
+}
